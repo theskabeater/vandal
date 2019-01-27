@@ -1,0 +1,30 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@types/react-redux": "^7.0.1",
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-observable": "^1.0.0",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.120",
+    "@types/react": "^16.7.21",
+    "@types/react-native": "^0.57.32",
+    "@types/remote-redux-devtools": "^0.5.3",
+    "babel-preset-expo": "^5.0.0",
+    "react-native-typescript-transformer": "^1.2.11",
+    "remote-redux-devtools": "^0.5.16",
+    "typescript": "^3.2.4"
+  },
+  "private": true
+}
