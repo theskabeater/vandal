@@ -1,5 +1,5 @@
-import { ILoginError, ILoginRequest, ILoginResponse } from '.';
-import { createAction } from '../action';
+import { createAction } from '../action/action.utils';
+import { ILoginError, ILoginRequest, ILoginResponse } from './login.model';
 
 export enum ActionType {
   LoginRequest = 'login.request',

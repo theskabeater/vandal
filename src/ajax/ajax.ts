@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
-import { IAjaxRequest, IAjaxResponse } from '.';
+import { IAjaxRequest, IAjaxResponse } from './ajax.model';
 
 const headers = {
   'X-Requested-With': 'XMLHttpRequest',

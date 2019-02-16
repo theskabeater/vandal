@@ -1,4 +1,4 @@
-import { Action, ActionType } from '.';
+import { Action, ActionType } from './login.action';
 
 export interface IState {
   error: boolean;

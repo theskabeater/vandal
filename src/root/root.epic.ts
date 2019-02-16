@@ -1,6 +1,6 @@
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
 
-import { epics as loginEpic } from '../login';
+import { epics as loginEpic } from '../login/login.epic';
 
 // tslint:disable:no-any
 export const epic = combineEpics<any>(...loginEpic);

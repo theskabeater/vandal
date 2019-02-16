@@ -3,7 +3,8 @@ import { Button, StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import { ILoginRequest, loginRequest, LoginRequestAction } from '.';
+import { loginRequest, LoginRequestAction } from './login.action';
+import { ILoginRequest } from './login.model';
 
 interface IDispatchProps {
   dispatchLoginRequest: (payload: ILoginRequest) => LoginRequestAction;

@@ -1,5 +1,5 @@
-import { ILoginRequest, ILoginResponse } from '.';
-import { post } from '../ajax';
+import { post } from '../ajax/ajax';
+import { ILoginRequest, ILoginResponse } from './login.model';
 
 export const login = (body: ILoginRequest) =>
   post<ILoginRequest, ILoginResponse>({

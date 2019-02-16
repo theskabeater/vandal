@@ -4,11 +4,11 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 
 import {
   ActionType,
-  login,
   loginError,
   LoginRequestAction,
   loginSuccess,
-} from '.';
+} from './login.action';
+import { login } from './login.ajax';
 
 export const requestLogin = (action$: Observable<LoginRequestAction>) =>
   action$.pipe(
