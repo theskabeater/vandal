@@ -1,4 +1,4 @@
-import { LoginScreen } from './screens/LoginScreen';
+import { LoginScreen } from '../login';
 
 export const routes = {
   // tslint:disable:object-literal-sort-keys

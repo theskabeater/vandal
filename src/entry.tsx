@@ -1,19 +1,8 @@
 import * as React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import { createEpicMiddleware } from 'redux-observable';
-import { composeWithDevTools } from 'remote-redux-devtools';
 
-import { rootEpic, rootReducer } from './reducers/root';
-import { routes } from './routes';
-
-const epicMiddleware = createEpicMiddleware();
-
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(epicMiddleware)),
-);
+import { epic as rootEpic, epicMiddleware, routes, store } from './root';
 
 epicMiddleware.run(rootEpic);
 
