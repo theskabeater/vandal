@@ -12,7 +12,7 @@ const navigation = createStackNavigator(routes);
 const AppNavigation = createAppContainer(navigation);
 
 export const entry = () => (
-  <Provider store={store}>
-    <AppNavigation />
-  </Provider>
+    <Provider store={store}>
+        <AppNavigation />
+    </Provider>
 );

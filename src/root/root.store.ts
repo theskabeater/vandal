@@ -5,6 +5,6 @@ import { epicMiddleware } from './root.epic';
 import { reducer as rootReducer } from './root.reducer';
 
 export const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(epicMiddleware)),
+    rootReducer,
+    composeWithDevTools(applyMiddleware(epicMiddleware)),
 );

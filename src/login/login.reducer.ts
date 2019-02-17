@@ -1,34 +1,34 @@
 import { Action, ActionType } from './login.action';
 
 export interface IState {
-  error: boolean;
-  requesting: boolean;
-  success: boolean;
-  token: string;
+    error: boolean;
+    requesting: boolean;
+    success: boolean;
+    token: string;
 }
 
 const initialState: IState = {
-  error: false,
-  requesting: false,
-  success: false,
-  token: '',
+    error: false,
+    requesting: false,
+    success: false,
+    token: '',
 };
 
 export const reducer = (
-  state: IState = initialState,
-  action: Action,
+    state: IState = initialState,
+    action: Action,
 ): IState => {
-  switch (action.type) {
+    switch (action.type) {
     case ActionType.LoginRequest:
-      return { ...initialState, requesting: true };
+        return { ...initialState, requesting: true };
 
     case ActionType.LoginSuccess:
-      return { ...initialState, success: true };
+        return { ...initialState, success: true };
 
     case ActionType.LoginError:
-      return { ...initialState, error: true };
+        return { ...initialState, error: true };
 
     default:
-      return state;
-  }
+        return state;
+    }
 };

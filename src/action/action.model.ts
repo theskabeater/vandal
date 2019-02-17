@@ -1,4 +1,5 @@
-export interface IAction<T> {
-  type: string;
-  payload: T;
+import { Action } from 'redux';
+
+export interface IAction<T> extends Action {
+    payload: T;
 }
