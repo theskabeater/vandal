@@ -13,12 +13,8 @@ export interface ILoginApiResponseError {
     email: string[];
 }
 
-export type LoginApiResponse =
-    | ILoginApiResponseSuccess
-    | ILoginApiResponseError;
-
 export const login = (body: ILoginApiRequest) =>
-    post<ILoginApiRequest, LoginApiResponse>({
+    post<ILoginApiRequest, ILoginApiResponseSuccess, ILoginApiResponseError>({
         body,
         endpoint: '/login',
     });

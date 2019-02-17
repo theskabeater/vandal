@@ -4,6 +4,7 @@
         "no-any": true,
         "no-console": false,
         "ter-indent": [true, 4],
+        "ter-arrow-parens": false,
         "prefer-array-literal": [true, { "allow-type-parameters": true }],
         "variable-name": [
             true,
