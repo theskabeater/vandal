@@ -1,4 +1,3 @@
-import { IAction } from '../action/action.model';
 import { createAction } from '../action/action.utils';
 
 export enum ActionType {
@@ -10,7 +9,7 @@ export enum ActionType {
 export type Action = LoginRequestAction | LoginSuccessAction | LoginErrorAction;
 
 /**
- * Login Request Request
+ * Login Request Action
  */
 export interface ILoginRequestPayload {
     email: string;
@@ -24,21 +23,17 @@ export const loginRequest = createAction<ILoginRequestPayload>(
 /**
  * Login Success Action
  */
-export interface ILoginSuccessPayload {
-    id: string;
-}
-export type LoginSuccessAction = IAction<ILoginSuccessPayload>;
-export const loginSuccess = createAction<ILoginSuccessPayload>(
-    ActionType.LoginSuccess,
-);
+export type LoginSuccessAction = ReturnType<typeof loginSuccess>;
+export const loginSuccess = createAction(ActionType.LoginSuccess);
 
 /**
  * Login Error Action
  */
 export interface ILoginErrorPayload {
     email: string[];
+    password: string[];
 }
-export type LoginErrorAction = IAction<ILoginErrorPayload>;
+export type LoginErrorAction = ReturnType<typeof loginError>;
 export const loginError = createAction<ILoginErrorPayload>(
     ActionType.LoginError,
 );

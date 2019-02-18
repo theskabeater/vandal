@@ -1,6 +1,10 @@
-import { LoginScreen } from '../login/login.screen';
+import { keys } from 'lodash';
 
-export const routes = {
-    // tslint:disable:object-literal-sort-keys
-    Login: { screen: LoginScreen },
-};
+export enum Routes {
+    Nav = 'NavContainer',
+    Login = 'LoginContainer',
+}
+
+export const routes: Routes[] = keys(Routes).map(
+    route => Routes[route as keyof typeof Routes],
+);

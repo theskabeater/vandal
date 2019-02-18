@@ -3,8 +3,10 @@
     "rules": {
         "no-any": true,
         "no-console": false,
-        "ter-indent": [true, 4],
+        "ter-indent": [true, 4, { "SwitchCase": 1 }],
         "ter-arrow-parens": false,
+        "object-literal-sort-keys": false,
+        "object-shorthand-properties-first": false,
         "prefer-array-literal": [true, { "allow-type-parameters": true }],
         "variable-name": [
             true,

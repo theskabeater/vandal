@@ -1,6 +1,6 @@
 /**
  * Defaults from https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/
- * Added "jsx": "react-native"
+ * Added "jsx": "react-native".
  * Added "include": ["App.ts"].
  */
 {

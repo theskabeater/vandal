@@ -1,13 +1,5 @@
-import {
-    ILoginErrorPayload,
-    ILoginRequestPayload,
-    ILoginSuccessPayload,
-} from './login.action';
-import {
-    ILoginApiRequest,
-    ILoginApiResponseError,
-    ILoginApiResponseSuccess,
-} from './login.api';
+import { ILoginErrorPayload, ILoginRequestPayload } from './login.action';
+import { ILoginApiRequest, ILoginApiResponseError } from './login.api';
 
 /**
  * Login Request Map
@@ -15,13 +7,6 @@ import {
 export const toLoginApiRequest = (
     payload: ILoginRequestPayload,
 ): ILoginApiRequest => payload;
-
-/**
- * Login Success Map
- */
-export const fromLoginApiSuccess = (
-    payload: ILoginApiResponseSuccess,
-): ILoginSuccessPayload => payload;
 
 /**
  * Login Error Map

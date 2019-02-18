@@ -1,17 +1,15 @@
-import { Action, ActionType } from './login.action';
+import { Action, ActionType, ILoginErrorPayload } from './login.action';
 
 export interface IState {
-    error: boolean;
     requesting: boolean;
     success: boolean;
-    token: string;
+    error: ILoginErrorPayload | {};
 }
 
 const initialState: IState = {
-    error: false,
     requesting: false,
     success: false,
-    token: '',
+    error: {},
 };
 
 export const reducer = (
@@ -19,16 +17,19 @@ export const reducer = (
     action: Action,
 ): IState => {
     switch (action.type) {
-    case ActionType.LoginRequest:
-        return { ...initialState, requesting: true };
+        case ActionType.LoginRequest:
+            return { ...initialState, requesting: true };
 
-    case ActionType.LoginSuccess:
-        return { ...initialState, success: true };
+        case ActionType.LoginSuccess:
+            return { ...initialState, success: true };
 
-    case ActionType.LoginError:
-        return { ...initialState, error: true };
+        case ActionType.LoginError:
+            return {
+                ...initialState,
+                error: action.payload as ILoginErrorPayload,
+            };
 
-    default:
-        return state;
+        default:
+            return state;
     }
 };
