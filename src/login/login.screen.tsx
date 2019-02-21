@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Input } from 'react-native-elements';
+import { NavigationScreenOptions } from 'react-navigation';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
@@ -22,9 +23,13 @@ const styles = StyleSheet.create({
     },
 });
 
-export const LoginContainer = connect()(
+export const LoginScreen = connect()(
     class extends React.Component<IPropTypes, IState> {
-        public state = {
+        public static navigationOptions: NavigationScreenOptions = {
+            title: 'Login',
+        };
+
+        public state: IState = {
             email: '',
             password: '',
         };
