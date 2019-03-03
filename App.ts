@@ -3,6 +3,6 @@
  * with typescript support.
  */
 
-import { EntryContainer } from './src/entry.container';
+import { EntryContainer } from './src/container';
 
 export default EntryContainer;

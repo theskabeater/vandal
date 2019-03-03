@@ -1,13 +1,12 @@
-import { IUserResponsePayload } from './user.action';
-import { IUserApiResponse } from './user.api';
+import { IResponse as IApiResponse } from './api';
+import { IUser } from './model';
 
 /**
  * User Response Map
  */
-export const fromUserApiResponse = (
-    response: IUserApiResponse,
-): IUserResponsePayload => {
+export const fromApiResponse = (response: IApiResponse): IUser => {
     const { data } = response;
+
     return {
         id: data.id,
         name: data.name,

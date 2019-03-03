@@ -1,6 +1,6 @@
 import { keys } from 'lodash';
-import { registerRoute } from '../core/core.utils';
-import { HomeScreen } from './home.screen';
+import { registerRoute } from '../core/utils';
+import { HomeScreen } from './screen';
 
 export const routeConfig = registerRoute({
     'home-screen': HomeScreen,

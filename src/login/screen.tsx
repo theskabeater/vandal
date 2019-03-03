@@ -5,14 +5,15 @@ import { NavigationScreenOptions } from 'react-navigation';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import { button, centered } from '../core/core.styles';
-import { ILoginRequestPayload, loginRequest } from './login.action';
+import { button, centered } from '../core/styles';
+import { Action } from './action';
+import { IRequest } from './model';
 
 interface IPropTypes {
     dispatch: Dispatch;
 }
 
-interface IState {
+interface IState extends IRequest {
     email: string;
     password: string;
 }
@@ -55,9 +56,7 @@ export const LoginScreen = connect()(
         )
 
         private onSubmitPress = () => {
-            this.props.dispatch(
-                loginRequest(this.state as ILoginRequestPayload),
-            );
+            this.props.dispatch(Action.loginRequest(this.state));
         }
     },
 );

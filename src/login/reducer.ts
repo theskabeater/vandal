@@ -1,9 +1,10 @@
-import { Action, ActionType, ILoginErrorPayload } from './login.action';
+import { Action, ActionType } from './action';
+import { IError } from './model';
 
 export interface IState {
     requesting: boolean;
     success: boolean;
-    error: ILoginErrorPayload | {};
+    error: IError;
 }
 
 const initialState: IState = {
@@ -26,7 +27,7 @@ export const reducer = (
         case ActionType.LoginError:
             return {
                 ...initialState,
-                error: action.payload as ILoginErrorPayload,
+                error: action.payload,
             };
 
         default:

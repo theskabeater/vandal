@@ -4,9 +4,9 @@ import {
     NavigationRouteConfig,
 } from 'react-navigation';
 
-import { routeConfig as HomeRouteConfig } from '../home/home.navigation';
-import { routeConfig as LoginRouteConfig } from '../login/login.navigation';
-import { routeConfig as MessageRouteConfig } from '../message/message.navigaton';
+import { routeConfig as HomeRouteConfig } from '../home/navigation';
+import { routeConfig as LoginRouteConfig } from '../login/navigation';
+import { routeConfig as MessageRouteConfig } from '../message/navigation';
 
 export const routeConfig: NavigationRouteConfig = {
     ...HomeRouteConfig,

@@ -1,8 +1,8 @@
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
 
-import { epic as rootEpic, epicMiddleware } from './root.epic';
-import { reducer as rootReducer } from './root.reducer';
+import { epic as rootEpic, epicMiddleware } from './epic';
+import { reducer as rootReducer } from './reducer';
 
 export const store = createStore(
     rootReducer,

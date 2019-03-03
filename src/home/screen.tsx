@@ -10,8 +10,8 @@ import {
 } from 'react-navigation';
 import { connect } from 'react-redux';
 
-import { button, centered } from '../core/core.styles';
-import { getRoutes } from '../core/core.utils';
+import { button, centered } from '../core/styles';
+import { getRoutes } from '../core/utils';
 
 interface IProps {
     navigation: NavigationScreenProp<NavigationParams>;

@@ -1,11 +1,12 @@
 import { createAction } from '../action/utils';
+import { IUser } from './model';
 
 export enum ActionType {
-    NoOp = 'action.NoOp',
+    UserSuccess = 'user.success',
 }
 
 export const Action = {
-    noOp: () => createAction(ActionType.NoOp),
+    userSuccess: (user: IUser) => createAction(ActionType.UserSuccess, user),
 };
 
 export type Action = ReturnType<typeof Action[keyof typeof Action]>;

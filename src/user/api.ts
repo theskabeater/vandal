@@ -1,4 +1,4 @@
-export interface IUserApiResponse {
+export interface IResponse {
     data: {
         id: string;
         name: string;
