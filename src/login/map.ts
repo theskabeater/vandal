@@ -4,9 +4,12 @@ import { IError, IRequest } from './model';
 /**
  * Login Request Map
  */
-export const toApiRequest = (payload: IRequest): IApiRequest => payload;
+export const toApiRequest = (request: IRequest): IApiRequest => request;
 
 /**
  * Login Error Map
  */
-export const fromApiError = (payload: IApiError): IError => payload;
+export const fromApiError = (apiError: IApiError): IError => ({
+    message: apiError.message,
+    errors: apiError.errors,
+});

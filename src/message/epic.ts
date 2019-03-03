@@ -15,10 +15,10 @@ export const requestMessage = (action$: Observable<Action>) =>
                 switchMap(({ response }) =>
                     of(Action.messageSuccess(fromApiResponse(response))),
                 ),
+                catchError(({ response }: { response: IApiError }) =>
+                    of(Action.messageError(fromApiError(response))),
+                ),
             ),
-        ),
-        catchError(({ response }: { response: IApiError }) =>
-            of(Action.messageError(fromApiError(response))),
         ),
     );
 

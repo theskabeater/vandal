@@ -1,7 +1,7 @@
 import {
     IError as IApiError,
+    IMessage as IApiMessage,
     IRequest as IApiRequest,
-    IResponse as IApiResonse,
 } from './api';
 import { IError, IMessage, IRequest } from './model';
 
@@ -17,8 +17,8 @@ export const toApiRequest = (request: IRequest): IApiRequest => ({
  * Message Response Map
  */
 
-export const fromApiResponse = (response: IApiResonse): IMessage[] =>
-    response.messages.map(message => ({
+export const fromApiResponse = (messages: IApiMessage[]): IMessage[] =>
+    messages.map(message => ({
         id: message.id,
         text: message.text,
         createdAt: message.created_at,
@@ -28,6 +28,7 @@ export const fromApiResponse = (response: IApiResonse): IMessage[] =>
 /**
  * Message Error Map
  */
-export const fromApiError = (error: IApiError): IError => ({
-    apiToken: error.api_token,
+export const fromApiError = (apiError: IApiError): IError => ({
+    message: apiError.message,
+    errors: apiError.errors,
 });

@@ -1,5 +1,7 @@
+import { IError as ICoreError } from '../core/model';
+
 export interface IRequest {
-    apiToken?: string;
+    apiToken: string;
 }
 
 export interface IMessage {
@@ -9,6 +11,6 @@ export interface IMessage {
     updatedAt: Date;
 }
 
-export interface IError {
-    apiToken?: string[];
+export interface IError extends ICoreError {
+    errors: {};
 }

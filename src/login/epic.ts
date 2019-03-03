@@ -20,10 +20,10 @@ export const requestLogin = (action$: Observable<Action>) =>
                         of(UserAction.userSuccess(fromApiResponse(response))),
                     ),
                 ),
+                catchError(({ response }: { response: IError }) =>
+                    of(Action.loginError(fromApiError(response))),
+                ),
             ),
-        ),
-        catchError(({ response }: { response: IError }) =>
-            of(Action.loginError(fromApiError(response))),
         ),
     );
 

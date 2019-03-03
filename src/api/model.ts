@@ -9,4 +9,9 @@ export interface IResponse<T> extends AjaxResponse {
     response: T;
 }
 
-export type Error = string[];
+export interface IError {
+    message: string;
+    errors: {
+        [key: string]: string[] | undefined;
+    };
+}
