@@ -2,7 +2,7 @@ import { api } from '../api/api';
 import { IError as IApiError } from '../api/model';
 
 export interface IRequest {
-    api_token: string;
+    api_token?: string;
 }
 
 export interface IMessage {

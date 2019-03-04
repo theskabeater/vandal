@@ -14,6 +14,4 @@ export const routeConfig: NavigationRouteConfig = {
     ...MessageRouteConfig,
 };
 
-export const AppNavigation = createAppContainer(
-    createStackNavigator(routeConfig),
-);
+export const Navigation = createAppContainer(createStackNavigator(routeConfig));

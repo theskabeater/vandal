@@ -11,7 +11,7 @@ export interface IState {
 const initialState: IState = {
     requesting: false,
     success: false,
-    error: {},
+    error: { message: '', errors: {} },
     messages: [],
 };
 
