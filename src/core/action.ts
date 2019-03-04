@@ -2,9 +2,9 @@ import { createAction } from '../action/utils';
 import { IUser } from '../user/model';
 
 export enum ActionType {
-    StoredUserRequest = 'stored.user.request',
-    StoredUserSuccess = 'stored.user.success',
-    StoredUserError = 'stored.user.error',
+    StoredUserRequest = '[core] stored.user.request',
+    StoredUserSuccess = '[core] stored.user.success',
+    StoredUserError = '[core] stored.user.error',
 }
 
 export const Action = {

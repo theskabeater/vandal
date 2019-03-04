@@ -1,7 +1,7 @@
 import { createAction } from '../action/utils';
 
 export enum ActionType {
-    NoOp = 'action.NoOp',
+    NoOp = '[action] no.op',
 }
 
 export const Action = {

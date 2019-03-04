@@ -2,9 +2,9 @@ import { createAction } from '../action/utils';
 import { IError, IMessage, IRequest } from './model';
 
 export enum ActionType {
-    MessageRequest = 'message.request',
-    MessageSuccess = 'message.success',
-    MessageError = 'message.error',
+    MessageRequest = '[message] message.request',
+    MessageSuccess = '[message] message.success',
+    MessageError = '[message] message.error',
 }
 
 export const Action = {

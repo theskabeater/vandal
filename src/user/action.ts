@@ -2,7 +2,7 @@ import { createAction } from '../action/utils';
 import { IUser } from './model';
 
 export enum ActionType {
-    UserSuccess = 'user.success',
+    UserSuccess = '[user] user.success',
 }
 
 export const Action = {

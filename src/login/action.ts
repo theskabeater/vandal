@@ -3,9 +3,9 @@ import { IUser } from '../user/model';
 import { IError, IRequest } from './model';
 
 export enum ActionType {
-    LoginRequest = 'login.request',
-    LoginSuccess = 'login.success',
-    LoginError = 'login.error',
+    LoginRequest = '[login] login.request',
+    LoginSuccess = '[login] login.success',
+    LoginError = '[login] login.error',
 }
 
 export const Action = {
