@@ -1,4 +1,4 @@
-import { createAction } from '../action/utils';
+import { ActionUnion, createAction } from '../action/utils';
 import { IError, IMessage, IRequest } from './model';
 
 export enum ActionType {
@@ -16,4 +16,4 @@ export const Action = {
         createAction(ActionType.MessageError, error),
 };
 
-export type Action = ReturnType<typeof Action[keyof typeof Action]>;
+export type Action = ActionUnion<typeof Action>;

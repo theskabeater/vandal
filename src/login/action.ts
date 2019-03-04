@@ -1,4 +1,4 @@
-import { createAction } from '../action/utils';
+import { ActionUnion, createAction } from '../action/utils';
 import { IUser } from '../user/model';
 import { IError, IRequest } from './model';
 
@@ -15,4 +15,4 @@ export const Action = {
     loginError: (error: IError) => createAction(ActionType.LoginError, error),
 };
 
-export type Action = ReturnType<typeof Action[keyof typeof Action]>;
+export type Action = ActionUnion<typeof Action>;
